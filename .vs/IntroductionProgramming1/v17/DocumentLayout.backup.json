@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Inholland\\IntroductionProgramming1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35F3C69B-A333-4722-8CEA-017709DD5AC7}|Assignment5\\Assignment5.csproj|d:\\inholland\\introductionprogramming1\\assignment5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35F3C69B-A333-4722-8CEA-017709DD5AC7}|Assignment5\\Assignment5.csproj|solutionrelative:assignment5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31488614-17CD-48D2-AD51-CF0961FC8841}|Assignment4\\Assignment4.csproj|d:\\inholland\\introductionprogramming1\\assignment4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31488614-17CD-48D2-AD51-CF0961FC8841}|Assignment4\\Assignment4.csproj|solutionrelative:assignment4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C87A306-832E-4FDD-8849-E997474391F1}|Assignment3\\Assignment3.csproj|d:\\inholland\\introductionprogramming1\\assignment3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C87A306-832E-4FDD-8849-E997474391F1}|Assignment3\\Assignment3.csproj|solutionrelative:assignment3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Inholland\\IntroductionProgramming1\\Assignment5\\Program.cs",
+              "RelativeDocumentMoniker": "Assignment5\\Program.cs",
+              "ToolTip": "D:\\Inholland\\IntroductionProgramming1\\Assignment5\\Program.cs",
+              "RelativeToolTip": "Assignment5\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBsAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T09:27:22.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Inholland\\IntroductionProgramming1\\Assignment4\\Program.cs",
+              "RelativeDocumentMoniker": "Assignment4\\Program.cs",
+              "ToolTip": "D:\\Inholland\\IntroductionProgramming1\\Assignment4\\Program.cs",
+              "RelativeToolTip": "Assignment4\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T09:21:44.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Inholland\\IntroductionProgramming1\\Assignment3\\Program.cs",
+              "RelativeDocumentMoniker": "Assignment3\\Program.cs",
+              "ToolTip": "D:\\Inholland\\IntroductionProgramming1\\Assignment3\\Program.cs",
+              "RelativeToolTip": "Assignment3\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwBMAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T09:15:32.02Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
