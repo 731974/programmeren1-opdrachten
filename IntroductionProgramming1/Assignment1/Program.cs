@@ -5,14 +5,14 @@
         static void Main(string[] args)
         {
 
-            //WRITE A QUESTION IN THE CONSOLE
+            //ASK THE NAME OF THE USER (CONSOLE)
             string name;
             Console.Write("Enter your name: ");
 
             //RETRIEVE THE USER INPUT FROM THE CONSOLE
             name = Console.ReadLine();
 
-            //WRITE A QUESTION IN THE CONSOLE
+            //ASK THE AGE OF THE USER (CONSOLE)
             Console.Write("Enter your age: ");
 
             //RETRIEVE THE USER INPUT FROM THE CONSOLE
