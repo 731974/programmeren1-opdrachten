@@ -20,17 +20,31 @@
             Console.Write("Enter the third number: ");
             int thirdNumber = int.Parse(Console.ReadLine());
 
-           FindMax(firstNumber, secondNumber, thirdNumber);
-
+            int highestNumber = FindMax(firstNumber, secondNumber, thirdNumber);
+            Console.WriteLine($"The largest number is {highestNumber}");
 
         }
 
-        int FindMax(int num1, int num2, int num3)
+            int FindMax(int num1, int num2, int num3)
         {
+            int highestNumber;
 
-            Console.Write(num1);
+            if (num1 > num2 && num1 > num3)
+            {
 
+                highestNumber = num1;
 
+            }
+            else if (num2 > num1 && num2 > num3) {
+
+                highestNumber = num2;
+
+            } else
+            {
+                highestNumber = num3;
+            }
+
+            return highestNumber;
         }
     }
 }
