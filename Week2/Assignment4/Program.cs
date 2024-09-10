@@ -34,7 +34,9 @@
                 case "/":
                     CalculateResult(firstNumber, secondNumber, operation);
                     break;
-
+                default:
+                    Console.WriteLine("You need to give an operator");
+                    break;
             }
 
         }
