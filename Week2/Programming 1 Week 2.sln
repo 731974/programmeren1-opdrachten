@@ -37,11 +37,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment7unittests", "Tes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment8unittests", "Tests\assignment8unittests\assignment8unittests.csproj", "{550EE193-3287-4F62-A502-E7B030D72B9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment9", "Assignment9\Assignment9.csproj", "{FAAAF155-31F7-4B89-91E5-F1AB886FB29B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment9", "Assignment9\Assignment9.csproj", "{FAAAF155-31F7-4B89-91E5-F1AB886FB29B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment10", "Assignment10\Assignment10.csproj", "{FCD0F43E-C3F4-43B5-9388-7128E64395B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment10", "Assignment10\Assignment10.csproj", "{FCD0F43E-C3F4-43B5-9388-7128E64395B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment11", "Assignment11\Assignment11.csproj", "{A3A98CAF-7920-413A-9AD8-6F91B02059EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment11", "Assignment11\Assignment11.csproj", "{A3A98CAF-7920-413A-9AD8-6F91B02059EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment 12", "Assignment 12\Assignment 12.csproj", "{4A2BB2EB-66F5-4C32-AE19-283D5CC8431D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment 13", "Assignment 13\Assignment 13.csproj", "{CEF55F34-584A-44A8-9BBB-F3DDA4DD04E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +129,14 @@ Global
 		{A3A98CAF-7920-413A-9AD8-6F91B02059EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3A98CAF-7920-413A-9AD8-6F91B02059EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3A98CAF-7920-413A-9AD8-6F91B02059EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2BB2EB-66F5-4C32-AE19-283D5CC8431D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2BB2EB-66F5-4C32-AE19-283D5CC8431D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2BB2EB-66F5-4C32-AE19-283D5CC8431D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2BB2EB-66F5-4C32-AE19-283D5CC8431D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF55F34-584A-44A8-9BBB-F3DDA4DD04E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF55F34-584A-44A8-9BBB-F3DDA4DD04E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF55F34-584A-44A8-9BBB-F3DDA4DD04E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF55F34-584A-44A8-9BBB-F3DDA4DD04E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
