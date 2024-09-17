@@ -16,10 +16,9 @@
             bool isEven = IsEven(number);
 
             if (isEven) {
-
                 Console.WriteLine($"{number} is an even number.");
-
-            } else
+            } 
+            else
             {
                 Console.WriteLine($"{number} is an odd number");
             }
@@ -28,8 +27,7 @@
 
         public bool IsEven(int number)
         {
-
-            if(number % 2 == 0 )
+            if (number % 2 == 0)  //Name is modulus.
             {
                 return true;
             }

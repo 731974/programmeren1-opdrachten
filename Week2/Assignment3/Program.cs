@@ -24,7 +24,6 @@
                 Console.WriteLine("The number is zero.");
             } else
             {
-
                  if(number < 0)
                 {
                     Console.WriteLine("The number is negative.");

@@ -10,48 +10,29 @@
 
         void Start()
         {
-
             Console.Write("Enter a number (1-7) to get the day of the week: ");
             int number = int.Parse(Console.ReadLine());
-
             string dayName = GetDayOfWeek(number);
 
             Console.WriteLine($"The day is: {dayName}");
-
         }
 
         public string GetDayOfWeek(int dayNumber)
         {
-            string dayName = "Invalid day number";
-
-            if (dayNumber == 1)
+            string dayName = dayNumber switch
             {
-                dayName = "Monday";
-            }
-            else if (dayNumber == 2)
-            {
-                dayName = "Tuesday";
-            }
-            else if (dayNumber == 3)
-            {
-                dayName = "Wednesday";
-            }
-            else if (dayNumber == 4) {
-                dayName = "Thursday";
-            }
-            else if (dayNumber == 5)
-            {
-                dayName = "Friday";
-            } else if (dayNumber == 6)
-            {
-                dayName = "Saturday";
-            } else if (dayNumber == 7)
-            {
-                dayName = "Sunday";
-            } 
+                1 => "Monday",
+                2 => "Tuesday",
+                3 => "Wednesday",
+                4 => "Thursday",
+                5 => "Friday",
+                6 => "Saturday",
+                7 => "Sunday",
+                _ => "Invalid day number"
+            };
 
             return dayName;
 
-        }       
+        }
     }
 }

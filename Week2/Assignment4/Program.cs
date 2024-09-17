@@ -20,47 +20,37 @@
             Console.Write("Choose an operation (+, -, *, /): ");
             string operation = Console.ReadLine();
 
-            switch (operation)
-            {
-                case "+":
-                    CalculateResult(firstNumber, secondNumber, operation);
-                    break;
-                case "-":
-                    CalculateResult(firstNumber, secondNumber, operation);
-                    break;
-                case "*":
-                    CalculateResult(firstNumber, secondNumber, operation);
-                    break;
-                case "/":
-                    CalculateResult(firstNumber, secondNumber, operation);
-                    break;
-                default:
-                    Console.WriteLine("You need to give an operator");
-                    break;
-            }
+            double result = CalculateResult(firstNumber, secondNumber, operation);
+
+            Console.WriteLine($"The result is {result}");
+
 
         }
 
         public double CalculateResult(double num1, double num2, string operation)
         {
 
-            double result;
+            double result = 0;
 
-            if (operation == "+")
+            switch (operation)
             {
-                result = Add(num1, num2);
-            } else if (operation == "-")
-            {
-                result = Subtract(num1, num2);
-            } else if (operation == "/")
-            {
-                result = Divide(num1, num2);
-            } else
-            {
-                result = Multiply(num1, num2);
+                case "+":
+                    result = Add(num1, num2);
+                    break;
+                case "-":
+                    result = Subtract(num1, num2);
+                    break;
+                case "*":
+                    result = Multiply(num1, num2);
+                    break;
+                case "/":
+                    result = Divide(num1, num2);
+                    break;
+                default:
+                    Console.WriteLine("You need to give an operator");
+                    break;
             }
 
-            Console.WriteLine($"The result is {result}");
 
             return result;
         }

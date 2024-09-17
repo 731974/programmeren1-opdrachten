@@ -27,21 +27,14 @@
 
         public int FindMax(int num1, int num2, int num3)
         {
-            int highestNumber;
+            int highestNumber = num1;
 
-            if (num1 > num2 && num1 > num3)
+            if(highestNumber < num2)
             {
-
-                highestNumber = num1;
-
-            }
-            else if (num2 > num1 && num2 > num3)
-            {
-
                 highestNumber = num2;
-
             }
-            else
+
+            if (highestNumber < num3)
             {
                 highestNumber = num3;
             }
