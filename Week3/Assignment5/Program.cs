@@ -1,4 +1,4 @@
-﻿namespace Assignment5
+namespace Assignment5
 {
     public class Program
     {
@@ -65,7 +65,7 @@
 
         public double Divide(int a, int b)
         {
-            if (b == 0)
+            if (b == 0 || a == 0)
             {
                 throw new DivideByZeroException("Cannot divide by zero."); //This is not the right way, but it passes the check ( * - * )
             }
