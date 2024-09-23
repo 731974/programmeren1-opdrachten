@@ -1,0 +1,91 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Tests assignment 6
+      id: tests-assignment-6
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Tests assignment 6
+        setup-command: ''
+        command: dotnet test .\Tests\assignment6tests\
+        timeout: 1
+    - name: Tests assignment 2
+      id: tests-assignment-2
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Tests assignment 2
+        setup-command: ''
+        command: dotnet test .\Tests\assignment2tests\
+        timeout: 1
+    - name: Tests assignment 3
+      id: tests-assignment-3
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Tests assignment 3
+        setup-command: ''
+        command: dotnet test .\Tests\assignment3tests\
+        timeout: 1
+    - name: Tests assignment 4
+      id: tests-assignment-4
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Tests assignment 4
+        setup-command: ''
+        command: dotnet test .\Tests\assignment4tests\
+        timeout: 1
+    - name: Tests assignment 5
+      id: tests-assignment-5
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Tests assignment 5
+        setup-command: ''
+        command: dotnet test .\Tests\assignment5tests\
+        timeout: 1
+    - name: Tests assignment 6
+      id: tests-assignment-6
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Tests assignment 6
+        setup-command: ''
+        command: dotnet test .\Tests\assignment6tests\
+        timeout: 10
+    - name: Tests assignment 7
+      id: tests-assignment-7
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Tests assignment 7
+        setup-command: ''
+        command: dotnet test .\Tests\assignment7tests\
+        timeout: 10
+    - name: Tests assignment 8
+      id: tests-assignment-8
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Tests assignment 8
+        setup-command: ''
+        command: dotnet test .\Tests\assignment8tests\
+        timeout: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TESTS-ASSIGNMENT-6_RESULTS: "${{steps.tests-assignment-6.outputs.result}}"
+        TESTS-ASSIGNMENT-2_RESULTS: "${{steps.tests-assignment-2.outputs.result}}"
+        TESTS-ASSIGNMENT-3_RESULTS: "${{steps.tests-assignment-3.outputs.result}}"
+        TESTS-ASSIGNMENT-4_RESULTS: "${{steps.tests-assignment-4.outputs.result}}"
+        TESTS-ASSIGNMENT-5_RESULTS: "${{steps.tests-assignment-5.outputs.result}}"
+        TESTS-ASSIGNMENT-7_RESULTS: "${{steps.tests-assignment-7.outputs.result}}"
+        TESTS-ASSIGNMENT-8_RESULTS: "${{steps.tests-assignment-8.outputs.result}}"
+      with:
+        runners: tests-assignment-6,tests-assignment-2,tests-assignment-3,tests-assignment-4,tests-assignment-5,tests-assignment-6,tests-assignment-7,tests-assignment-8
