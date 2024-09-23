@@ -8,14 +8,9 @@
             program.Start();
         }
 
-        void Start()
-        {
+        // This is public for the tests, don't change this.
+        public void Start()
+        { 
         }
-
-        public void CheckNumber(int number)
-        {
-        }
-
-
     }
 }

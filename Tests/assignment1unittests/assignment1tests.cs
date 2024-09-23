@@ -1,31 +1,40 @@
-using Microsoft.VisualStudio.TestPlatform.TestHost;
-using Assignment1;
+// RectangleTests.cs
 using NUnit.Framework;
+using Assignment1;
 
 namespace Assignment1.Tests
 {
     [TestFixture]
-    public class ProgramTests
+    public class RectangleTests
     {
-        private Program _program;
-
-        [SetUp]
-        public void Setup()
+        [TestCase(5, 10, 50)]
+        [TestCase(0, 0, 0)]
+        [TestCase(3.5, 2, 7)]
+        public void CalculateArea_ValidDimensions_ReturnsCorrectArea(double width, double height, double expectedArea)
         {
-            _program = new Program();
-        }
+            // Arrange
+            var rectangle = new Rectangle { Width = width, Height = height };
 
-        [TestCase(18, true)]
-        [TestCase(17, false)]
-        [TestCase(19, true)]
-        [TestCase(0, false)]
-        public void IsAdult_VariousAges_ReturnsExpectedResult(int age, bool expected)
-        {
             // Act
-            bool result = _program.IsAdult(age);
+            double area = rectangle.CalculateArea();
 
             // Assert
-            Assert.AreEqual(expected, result, $"For age {age}, expected {expected} but got {result}.");
+            Assert.AreEqual(expectedArea, area);
+        }
+
+        [TestCase(5, 10, 30)]
+        [TestCase(0, 0, 0)]
+        [TestCase(3.5, 2, 11)]
+        public void CalculatePerimeter_ValidDimensions_ReturnsCorrectPerimeter(double width, double height, double expectedPerimeter)
+        {
+            // Arrange
+            var rectangle = new Rectangle { Width = width, Height = height };
+
+            // Act
+            double perimeter = rectangle.CalculatePerimeter();
+
+            // Assert
+            Assert.AreEqual(expectedPerimeter, perimeter);
         }
     }
 }

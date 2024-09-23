@@ -1,31 +1,36 @@
+// ProgramTests.cs
 using NUnit.Framework;
-using Assignment2;
+using System;
+using System.IO;
 
 namespace Assignment2.Tests
 {
     [TestFixture]
     public class ProgramTests
     {
-        private Program _program;
-
-        [SetUp]
-        public void Setup()
+        [TestCase("Monday", "Weekend is loading...")]
+        [TestCase("Tuesday", "Weekend is loading...")]
+        [TestCase("Wednesday", "Weekend is loading...")]
+        [TestCase("Thursday", "Weekend is loading...")]
+        [TestCase("Friday", "Weekend is loading...")]
+        [TestCase("Saturday", "It's weekend!! Party time!")]
+        [TestCase("Sunday", "It's weekend!! Party time!")]
+        public void Start_ValidDayInput_DisplaysCorrectMessage(string input, string expectedMessage)
         {
-            _program = new Program();
-        }
+            // Arrange
+            var program = new Program();
+            var stringReader = new StringReader(input);
+            Console.SetIn(stringReader);
 
-        [TestCase(4, true)]
-        [TestCase(5, false)]
-        [TestCase(0, true)]
-        [TestCase(-2, true)]
-        [TestCase(-3, false)]
-        public void IsEven_VariousNumbers_ReturnsExpectedResult(int number, bool expected)
-        {
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
             // Act
-            bool result = _program.IsEven(number);
+            program.Start();
 
             // Assert
-            Assert.AreEqual(expected, result, $"For number {number}, expected {expected} but got {result}.");
+            var output = stringWriter.ToString().Trim();
+            Assert.IsTrue(output.Contains(expectedMessage));
         }
     }
 }

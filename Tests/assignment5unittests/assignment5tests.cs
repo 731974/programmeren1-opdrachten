@@ -1,31 +1,77 @@
+// ProgramTests.cs
 using NUnit.Framework;
-using Assignment5;
+using System;
+using System.IO;
 
 namespace Assignment5.Tests
 {
     [TestFixture]
     public class ProgramTests
     {
-        private Program _program;
-
-        [SetUp]
-        public void Setup()
+        [Test]
+        public void Constructor_ValidInput_PropertiesAreSet()
         {
-            _program = new Program();
-        }
+            // Arrange
+            string name = "John Doe";
+            int age = 30;
 
-        [TestCase(10, 5, 3, 10)]
-        [TestCase(5, 10, 3, 10)]
-        [TestCase(5, 3, 10, 10)]
-        [TestCase(5, 5, 5, 5)]
-        [TestCase(-5, -10, -3, -3)]
-        public void FindMax_VariousInputs_ReturnsExpectedResult(int num1, int num2, int num3, int expected)
-        {
             // Act
-            int result = _program.FindMax(num1, num2, num3);
+            var person = new Person(name, age);
 
             // Assert
-            Assert.AreEqual(expected, result, $"For inputs {num1}, {num2}, {num3}, expected {expected} but got {result}.");
+            Assert.AreEqual(name, person.Name);
+            Assert.AreEqual(age, person.Age);
+        }
+
+        [Test]
+        public void DisplayPersonInfo_ValidInput_DisplaysCorrectInfo()
+        {
+            // Arrange
+            string name = "John Doe";
+            int age = 30;
+            var person = new Person(name, age);
+
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            // Act
+            person.DisplayPersonInfo();
+
+            // Assert
+            var output = stringWriter.ToString();
+            Assert.IsTrue(output.Contains($"Name: {name}"));
+            Assert.IsTrue(output.Contains($"Age: {age}"));
+        }
+        [Test]
+        public void PrintPersonArray_ValidInput_DisplaysCorrectInfo()
+        {
+            // Arrange
+            var persons = new Person[]
+            {
+                new Person("John Doe", 30),
+                new Person("Jane Smith", 25),
+                new Person("Alice Johnson", 40)
+            };
+
+            var program = new Program();
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            // Act
+            program.PrintPersonArray(persons);
+
+            // Assert
+            var output = stringWriter.ToString();
+            Assert.IsTrue(output.Contains("Displaying all persons:"));
+            Assert.IsTrue(output.Contains("Person 1"));
+            Assert.IsTrue(output.Contains("Name: John Doe"));
+            Assert.IsTrue(output.Contains("Age: 30"));
+            Assert.IsTrue(output.Contains("Person 2"));
+            Assert.IsTrue(output.Contains("Name: Jane Smith"));
+            Assert.IsTrue(output.Contains("Age: 25"));
+            Assert.IsTrue(output.Contains("Person 3"));
+            Assert.IsTrue(output.Contains("Name: Alice Johnson"));
+            Assert.IsTrue(output.Contains("Age: 40"));
         }
     }
 }

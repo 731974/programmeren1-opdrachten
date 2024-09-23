@@ -11,10 +11,5 @@
         void Start()
         {
         }
-
-        public bool IsAdult(int age)
-        {
-            return false;
-        }
     }
 }

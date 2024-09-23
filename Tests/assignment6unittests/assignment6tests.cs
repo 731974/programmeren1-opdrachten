@@ -1,31 +1,79 @@
+// VotingSystemTests.cs
 using NUnit.Framework;
-using Assignment6;
+using System;
+using System.IO;
 
 namespace Assignment6.Tests
 {
     [TestFixture]
-    public class ProgramTests
+    public class VotingSystemTests
     {
-        private Program _program;
-
-        [SetUp]
-        public void Setup()
+        [Test]
+        public void Constructor_ValidSize_InitializesVotesArray()
         {
-            _program = new Program();
-        }
+            // Arrange
+            int size = 5;
 
-        [TestCase(95, "A")]
-        [TestCase(85, "B")]
-        [TestCase(75, "C")]
-        [TestCase(65, "D")]
-        [TestCase(55, "F")]
-        public void GetGrade_VariousScores_ReturnsExpectedGrade(int score, string expected)
-        {
             // Act
-            string result = _program.GetGrade(score);
+            var votingSystem = new VotingSystem(size);
 
             // Assert
-            Assert.AreEqual(expected, result, $"For score {score}, expected {expected} but got {result}.");
+            Assert.AreEqual(size, votingSystem.votes.Length);
+            Assert.AreEqual(0, votingSystem.currentVoteIndex);
+        }
+
+        [Test]
+        public void CastVote_ValidVote_AddsVoteToArray()
+        {
+            // Arrange
+            var votingSystem = new VotingSystem(3);
+
+            // Act
+            votingSystem.CastVote(VoteOption.Yes);
+            votingSystem.CastVote(VoteOption.No);
+
+            // Assert
+            Assert.AreEqual(VoteOption.Yes, votingSystem.votes[0]);
+            Assert.AreEqual(VoteOption.No, votingSystem.votes[1]);
+            Assert.AreEqual(2, votingSystem.currentVoteIndex);
+        }
+
+        [Test]
+        public void CastVote_ExceedsArraySize_DisplaysMessage()
+        {
+            // Arrange
+            var votingSystem = new VotingSystem(1);
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            // Act
+            votingSystem.CastVote(VoteOption.Yes);
+            votingSystem.CastVote(VoteOption.No);
+
+            // Assert
+            var output = stringWriter.ToString();
+            Assert.IsTrue(output.Contains("All votes have been cast."));
+        }
+
+        [Test]
+        public void DisplayResults_ValidVotes_DisplaysCorrectCounts()
+        {
+            // Arrange
+            var votingSystem = new VotingSystem(3);
+            votingSystem.CastVote(VoteOption.Yes);
+            votingSystem.CastVote(VoteOption.No);
+            votingSystem.CastVote(VoteOption.Yes);
+
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            // Act
+            votingSystem.DisplayResults();
+
+            // Assert
+            var output = stringWriter.ToString();
+            Assert.IsTrue(output.Contains("Yes: 2"));
+            Assert.IsTrue(output.Contains("No: 1"));
         }
     }
 }

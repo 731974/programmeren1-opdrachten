@@ -1,5 +1,7 @@
+// ProgramTests.cs
 using NUnit.Framework;
-using Assignment3;
+using System;
+using System.Globalization;
 using System.IO;
 
 namespace Assignment3.Tests
@@ -7,30 +9,59 @@ namespace Assignment3.Tests
     [TestFixture]
     public class ProgramTests
     {
-        private Program _program;
-
-        [SetUp]
-        public void Setup()
+        [TestCase(new int[] { 1, 2, 3 }, 6)]
+        [TestCase(new int[] { -1, -2, -3 }, -6)]
+        [TestCase(new int[] { 0, 0, 0 }, 0)]
+        public void CalculateSum_ValidInput_ReturnsCorrectSum(int[] numbers, int expectedSum)
         {
-            _program = new Program();
+            // Arrange
+            var program = new Program();
+
+            // Act
+            int sum = program.CalculateSum(numbers);
+
+            // Assert
+            Assert.AreEqual(expectedSum, sum);
         }
 
-        [TestCase(5, "The number is positive.\n")]
-        [TestCase(-3, "The number is negative.\n")]
-        [TestCase(0, "The number is zero.\n")]
-        public void CheckNumber_VariousNumbers_PrintsExpectedMessage(int number, string expected)
+        [TestCase(new int[] { 1, 2, 3 }, 2.0)]
+        [TestCase(new int[] { -1, -2, -3 }, -2.0)]
+        [TestCase(new int[] { 0, 0, 0 }, 0.0)]
+        public void CalculateAverage_ValidInput_ReturnsCorrectAverage(int[] numbers, double expectedAverage)
         {
-            using (StringWriter sw = new StringWriter())
-            {
-                Console.SetOut(sw);
+            // Arrange
+            var program = new Program();
 
-                // Act
-                _program.CheckNumber(number);
+            // Act
+            double average = program.CalculateAverage(numbers);
 
-                // Assert
-                Assert.AreEqual(expected, sw.ToString(), $"For number {number}, expected '{expected}' but got '{sw.ToString()}'.");
-            }
+            // Assert
+            Assert.AreEqual(expectedAverage, average, 0.01);
+        }
+
+        [Test]
+        public void Start_ValidInput_DisplaysCorrectSumAndAverage()
+        {
+            // Arrange
+            var program = new Program();
+            var input = $"1{Environment.NewLine}2{Environment.NewLine}3{Environment.NewLine}";
+            var stringReader = new StringReader(input);
+            Console.SetIn(stringReader);
+
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            // Act
+            program.Start();
+
+            // Assert
+            var output = stringWriter.ToString();
+            var cultureInfo = CultureInfo.CurrentCulture;
+            var expectedSum = "Sum: 6";
+            var expectedAverage = $"Average: {2.00.ToString("0.00", cultureInfo)}";
+
+            Assert.IsTrue(output.Contains(expectedSum));
+            Assert.IsTrue(output.Contains(expectedAverage));
         }
     }
 }
-

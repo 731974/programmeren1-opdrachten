@@ -8,13 +8,10 @@
             program.Start();
         }
 
-        void Start()
+        // This is public for the tests, don't change this.
+        public void Start()
         {
-        }
-
-        public bool IsEven(int number)
-        {
-            return false;
         }
     }
+
 }
