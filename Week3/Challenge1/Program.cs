@@ -26,18 +26,13 @@
             int current = 1;
             Console.WriteLine("Fibonacci sequence:");
 
-
             for (int i = 1; i <= terms; i++)
             {
-                //sequence += $"{prev.ToString()} ";
                 Console.Write($"{prev} ");
                 int next = prev + current;
                 prev = current;
                 current = next;
             }
-
-            //Console.WriteLine(sequence);
         }
-
     }
 }
