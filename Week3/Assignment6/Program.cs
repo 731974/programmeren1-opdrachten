@@ -10,44 +10,28 @@
 
         void Start()
         {
-
             Console.Write("Enter a positive integer greater than 1: ");
 
             int number = int.Parse(Console.ReadLine());
 
             bool isPrimeNumber = IsPrime(number);
 
-            if(isPrimeNumber)
+            if (isPrimeNumber)
             {
                 Console.WriteLine($"{number} is a prime number.");
             } else
             {
                 Console.WriteLine($"{number} is not a prime number.");
-
             }
         }
 
         public bool IsPrime(int number)
         {
-            int divideCount = 0;
-
-            for (int i = 1; i <= number; i++) { 
-            
-                if(number % i == 0)
-                {
-                    divideCount++;
-                }
-
+            for (int i = 2; i < number; i++) { 
+                if (number % i == 0)
+                    return false;
             }
-
-            if(divideCount == 2)
-            {
-                return true;
-            } else
-            {
-                return false;
-            }
-
+            return true;
         }
     }
 }

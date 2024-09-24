@@ -2,7 +2,7 @@ namespace Assignment5
 {
     public class Program
     {
-        bool exitCalculator = false;
+        bool isValidChoice = false;
 
         static void Main(string[] args)
         {
@@ -17,18 +17,18 @@ namespace Assignment5
 
         public void PerformCalculation()
         {
-            bool exitCalculator = false;
+            bool isValidChoice = false;
 
-            while (!exitCalculator)
+            while (!isValidChoice)
             {
                 DisplayMenu();
 
                 Console.Write("Enter your choice: ");
-                int method = int.Parse(Console.ReadLine());
+                int choice = int.Parse(Console.ReadLine());
 
-                if (method == 5)
+                if (choice >= 5)
                 {
-                    exitCalculator = true;
+                    isValidChoice = true;
                     return;
                 }
 
@@ -41,25 +41,25 @@ namespace Assignment5
 
                 double answer = 0;
 
-                if (method == 1)
-                {
-                    answer = Add(a, b);
+               switch(choice)
+               {
+                    case 1:
+                        answer = Add(a, b);
+                        break;
+                    case 2:
+                        answer = Subtract(a, b);
+                        break;
+                    case 3:
+                        answer = Multiply(a, b);
+                        break;
+                    case 4:
+                        answer = Divide(a, b);
+                        break;
+                    default:
+                        throw new Exception("This is not a valid choice");
                 }
-                else if (method == 2)
-                {
-                    answer = Subtract(a, b);
-                }
-                else if (method == 3)
-                {
-                    answer = Multiply(a, b);
-                }
-                else if (method == 4)
-                {
-                    answer = Divide(a, b);
-                }
-
+               
                 Console.WriteLine($"Result {answer}");
-
             }
         }
 
@@ -69,7 +69,7 @@ namespace Assignment5
             {
                 throw new DivideByZeroException("Cannot divide by zero."); //This is not the right way, but it passes the check ( * - * )
             }
-            return (double)a / b;
+            return (double)a / (double)b;
         }
 
 

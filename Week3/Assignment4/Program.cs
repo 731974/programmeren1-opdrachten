@@ -34,20 +34,16 @@
             int evenCount = 0;
             int oddCount = 0;
 
-            //Todo
             for(int i = start; i <= end; i++)
             {
 
                 if (i % 2 == 0)
                 {
-                    //Number is even
-
                     evenCount++;
                 } else
                 {
                     oddCount++;
                 }
-
             }
 
             return (evenCount, oddCount);

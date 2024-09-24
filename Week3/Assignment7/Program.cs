@@ -12,18 +12,14 @@ namespace Assignment7
 
         void Start()
         {
-
             Console.Write("Enter Dimension size: ");
-
             int dimensionSize = int.Parse(Console.ReadLine());
 
             PrintSquare(dimensionSize);
-
         }
 
        public void PrintSquare(int dimensionSize)
         {
-
             for (int i = 1; i <= dimensionSize; i++)
             {
                 //Rows
@@ -41,7 +37,6 @@ namespace Assignment7
                 }
                 Console.WriteLine();
             }
-
         }
     }
 }
