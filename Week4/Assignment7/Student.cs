@@ -8,8 +8,8 @@ namespace Assignment7
 {
     public class Student
     {
-        string Name;
-        int[] Grades;
+         string Name;
+         int[] Grades;
 
         public Student(string name, int[] grades)
         {

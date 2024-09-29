@@ -19,23 +19,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment8", "Assignment8\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment4", "Assignment4\Assignment4.csproj", "{717305FD-93E1-4223-A5E3-D77EAA4789A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment1unittests", "Tests\assignment1unittests\assignment1unittests.csproj", "{05A5096D-4B9D-4E15-B4C9-90088C255924}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment1unittests", "Tests\assignment1unittests\assignment1unittests.csproj", "{05A5096D-4B9D-4E15-B4C9-90088C255924}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8615646D-BD54-469B-A68A-6FD3472E82B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment2unittests", "Tests\assignment2unittests\assignment2unittests.csproj", "{63F7EB49-29FE-409F-A23A-0B86642E5029}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment2unittests", "Tests\assignment2unittests\assignment2unittests.csproj", "{63F7EB49-29FE-409F-A23A-0B86642E5029}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment3unittests", "Tests\assignment3unittests\assignment3unittests.csproj", "{07F05D95-0128-484F-AA61-617A1947C4DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment3unittests", "Tests\assignment3unittests\assignment3unittests.csproj", "{07F05D95-0128-484F-AA61-617A1947C4DE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment4unittests", "Tests\assignment4unittests\assignment4unittests.csproj", "{D81D0223-AC1A-4FE0-9B7C-3042DD78510F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment5unittests", "Tests\assignment5unittests\assignment5unittests.csproj", "{46918B66-4929-4B64-847C-C74FB85FC596}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment6unittests", "Tests\assignment6unittests\assignment6unittests.csproj", "{AB8AC8AD-71EB-4055-B6C0-3DA98BDC6107}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment6unittests", "Tests\assignment6unittests\assignment6unittests.csproj", "{AB8AC8AD-71EB-4055-B6C0-3DA98BDC6107}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment7unittests", "Tests\assignment7unittests\assignment7unittests.csproj", "{C8F0342F-1737-4042-B11F-49199E5DE422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment7unittests", "Tests\assignment7unittests\assignment7unittests.csproj", "{C8F0342F-1737-4042-B11F-49199E5DE422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment8unittests", "Tests\assignment8unittests\assignment8unittests.csproj", "{550EE193-3287-4F62-A502-E7B030D72B9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment8unittests", "Tests\assignment8unittests\assignment8unittests.csproj", "{550EE193-3287-4F62-A502-E7B030D72B9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge1", "Challenge1\Challenge1.csproj", "{EFEB4662-FCB2-47E8-A26F-D703A1B9D040}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +109,10 @@ Global
 		{550EE193-3287-4F62-A502-E7B030D72B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{550EE193-3287-4F62-A502-E7B030D72B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{550EE193-3287-4F62-A502-E7B030D72B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFEB4662-FCB2-47E8-A26F-D703A1B9D040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFEB4662-FCB2-47E8-A26F-D703A1B9D040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFEB4662-FCB2-47E8-A26F-D703A1B9D040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFEB4662-FCB2-47E8-A26F-D703A1B9D040}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
