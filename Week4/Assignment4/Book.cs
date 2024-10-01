@@ -8,22 +8,19 @@ namespace Assignment4
 {
     public class Book
     {
+        public string Title, Author;
 
-      public string Title, Author;
-
-     public Book (string Title, string Author)
+        public Book (string Title, string Author)
         {
-            this.Title = Title;
-            this.Author = Author;
+            Title = Title;
+            Author = Author;
         }
 
         public void DisplayBookInfo()
         {
-
             Console.WriteLine("Book information:");
-            Console.WriteLine($"Title: {Title} ");
-            Console.WriteLine($"Author: {Author} ");
-
+            Console.WriteLine($"Title: {Title}");
+            Console.WriteLine($"Author: {Author}");
         }
     }
 }

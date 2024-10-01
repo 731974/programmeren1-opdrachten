@@ -19,11 +19,9 @@ namespace Assignment4
 
         public void DisplayBookInfo()
         {
-
             Console.WriteLine("Book information:");
             Console.WriteLine($"Title: {Title} ");
             Console.WriteLine($"Author: {Author} ");
-
         }
     }
 }

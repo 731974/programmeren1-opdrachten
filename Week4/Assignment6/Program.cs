@@ -10,22 +10,17 @@
 
         void Start()
         {
-
             Console.Write("How many votes should be processed: ");
-            int sizeOfArray = int.Parse(Console.ReadLine());
+            int voteCount = int.Parse(Console.ReadLine());
 
-            VotingSystem voteSystem = new VotingSystem(sizeOfArray);
+            VotingSystem votingSystem = new(voteCount);
 
-            for (int i = 0; i < sizeOfArray; i++) {
-
-
+            for (int i = 0; i < votingSystem.votes.Length; i++) {
                 Console.Write("Enter your vote (Yes/No): ");
-                VoteOption vote = (VoteOption)Enum.Parse(typeof(VoteOption), Console.ReadLine());
-
-                voteSystem.CastVote(vote);
+                votingSystem.CastVote((VoteOption)Enum.Parse(typeof(VoteOption), Console.ReadLine()));
             }
 
-            voteSystem.DisplayResults();
+            votingSystem.DisplayResults();
         }
     }
 }

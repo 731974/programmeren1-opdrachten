@@ -9,20 +9,17 @@ namespace Assignment6
 {
     public class VotingSystem
     {
-
-       public VoteOption[] votes;
-       public int currentVoteIndex = 0;
-       public int maxVotes;
+        public VoteOption[] votes;
+        public int currentVoteIndex = 0;
 
         public VotingSystem(int size)
         {
             votes = new VoteOption[size];
-            maxVotes = size;
         }
 
-      public void CastVote(VoteOption vote)
+        public void CastVote(VoteOption vote)
         {
-            if (currentVoteIndex < maxVotes)
+            if (currentVoteIndex < votes.Length)
             {
                 votes[currentVoteIndex] = vote;
                 currentVoteIndex++;
@@ -31,29 +28,26 @@ namespace Assignment6
             {
                 Console.WriteLine("All votes have been cast.");
             }
-        
-
         }
         public void DisplayResults()
         {
-           int yesVotes = 0, noVotes = 0;
+            int yesCount = 0, noCount = 0;
 
             for (int i = 0; i < votes.Length; i++)
             {
-
-                if (votes[i] == VoteOption.Yes) {
-                    yesVotes++;
-                } else
+                if (votes[i] == VoteOption.Yes) 
                 {
-                    noVotes++;
+                    yesCount++;
+                } 
+                else
+                {
+                    noCount++;
                 }
-
             }
 
             Console.WriteLine("Results:");
-            Console.WriteLine($"Yes: {yesVotes}");
-            Console.WriteLine($"No: {noVotes}");
-
+            Console.WriteLine($"Yes: {yesCount}");
+            Console.WriteLine($"No: {noCount}");
         }
     }
 }

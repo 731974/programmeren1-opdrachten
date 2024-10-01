@@ -10,17 +10,15 @@ namespace Assignment8
     public class Library
     {
 
-       public Book[] books;
-       public int maxCapacity, currentBookIndex;
+        public Book[] books;
+        public int maxCapacity, currentBookIndex;
 
 
         public Library(int capacity)
         {
-
             books = new Book[capacity];
             maxCapacity = capacity;
             currentBookIndex = 0;
-
         }
 
         public void AddBook(Book book)
@@ -29,7 +27,8 @@ namespace Assignment8
             {
                 books[currentBookIndex] = book;
                 currentBookIndex++;
-            } else
+            } 
+            else
             {
                 Console.WriteLine("Library is full. Cannot add more books.");
             }
@@ -37,13 +36,9 @@ namespace Assignment8
 
        public void DisplayBooks()
         {
-
             Console.WriteLine("Books in library:");
-
             foreach (Book book in books) {
-
                 Console.WriteLine($"{book.Title} by {book.Author}");
-            
             }
         }
     }

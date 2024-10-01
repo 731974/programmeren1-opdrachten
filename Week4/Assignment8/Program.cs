@@ -12,14 +12,12 @@ namespace Assignment8
 
         void Start()
         {
-
             Console.Write("How many books should there be in the library: ");
             int capacity = int.Parse(Console.ReadLine());
 
             Library library = new Library(capacity);
 
             for (int i = 0; i < capacity; i++) {
-
                 //Retrieve user input
                 Console.Write("Enter book title: ");
                 string bookTitle = Console.ReadLine();
@@ -34,7 +32,6 @@ namespace Assignment8
             }
 
             library.DisplayBooks();
-
         }
     }
 }

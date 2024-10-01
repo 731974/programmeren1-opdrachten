@@ -8,7 +8,7 @@ namespace Assignment1
 {
     public class Rectangle()
     {
-        public double Width, Height;
+       public double Width, Height;
 
        public double CalculateArea()
         {
@@ -17,7 +17,7 @@ namespace Assignment1
 
         public double CalculatePerimeter()
         {
-            return 2 * Width + 2 * Height;
+            return 2 * (Width + Height);
         }
     }
 }

@@ -13,7 +13,8 @@
         {
 
             Console.Write("Enter a day of the week (e.g., Monday): ");
-            Day day = (Day)Enum.Parse(typeof(Day), Console.ReadLine()); 
+            string input = Console.ReadLine();
+            Day day = (Day)Enum.Parse(typeof(Day), input); 
           
             string response = DisplayMessage(day);
             Console.WriteLine(response);

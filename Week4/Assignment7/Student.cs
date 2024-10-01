@@ -20,34 +20,18 @@ namespace Assignment7
         public void DisplayGrades()
         {
             Console.WriteLine($"Grades for {Name}: ");
-
-            for (int i = 0; i < Grades.Length; i++)
-            {
-                if (i < Grades.Length - 1)
-                {
-                    Console.Write($"{Grades[i]}, ");
-
-                } else
-                {
-                    Console.Write($"{Grades[i]}\n");
-                }
-            }
-
+            Console.WriteLine(String.Join(", ", Grades));
             double averageScore = CalculateAverageGrade();
-
             Console.WriteLine($"Average Grade: {averageScore}");
         }
 
         public double CalculateAverageGrade()
         {
             int totalSum = 0;
-            foreach (int grade in Grades)
+            for(int i = 0; i < Grades.Length; i++)
             {
-
-                totalSum += grade;
-
+                totalSum += Grades[i];
             }
-
             return (double)totalSum / Grades.Length;
         }
     }
