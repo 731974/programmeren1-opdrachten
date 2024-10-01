@@ -10,7 +10,6 @@
 
         void Start()
         {
-
             //Retrieve user input
             Console.Write("Enter book title: ");
             string bookTitle = Console.ReadLine();

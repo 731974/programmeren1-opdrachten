@@ -10,10 +10,10 @@ namespace Assignment4
     {
         public string Title, Author;
 
-        public Book (string Title, string Author)
+        public Book (string title, string author)
         {
-            Title = Title;
-            Author = Author;
+            Title = title;
+            Author = author;
         }
 
         public void DisplayBookInfo()
