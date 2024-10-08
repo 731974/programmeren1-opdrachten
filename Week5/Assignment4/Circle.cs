@@ -8,31 +8,37 @@ namespace Assignment4
 {
     public class Circle
     {
-
         double _area;
-       public double Radius;
+        double _radius;
+        public double Radius
+        {
+            get
+            {
+                return _radius;
+            }
+            set
+            {
+                _radius = value;
+            }
+        }
         
         public Circle(double radius)
         {
-
-            Radius = radius;
-
+            _radius = radius;
         }
 
        public double Area
         {
             get
             {
-                return Math.PI * Radius * Radius;
+                return Math.PI * Math.Pow(_radius, 2);
             }
         }
 
         public void DisplayCircleInfo()
         {
-            Console.WriteLine($"Radius: {Radius}");
-
-            Console.WriteLine($"Area: {Area}");
-
+            Console.WriteLine($"Radius: {_radius}");
+            Console.WriteLine($"Area: {_area}");
         }
     }
 }

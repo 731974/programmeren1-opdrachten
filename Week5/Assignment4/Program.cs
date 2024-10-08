@@ -10,14 +10,11 @@
 
         void Start()
         {
-
             Console.Write("Enter radius: ");
             int radius = int.Parse(Console.ReadLine());
 
             Circle circle = new(radius);
-
             circle.DisplayCircleInfo();
-
         }
     }
 }

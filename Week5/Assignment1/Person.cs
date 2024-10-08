@@ -8,26 +8,34 @@ namespace Assignment1
 {
     public class Person
     {
-
-        public string Name { get; set; }
         string _name;
-        public int Age { get; set; }
+        public string Name { get
+            {
+                return _name;
+            } set {
+                _name = value;
+            } 
+        }
+
         int _age;
+        public int Age { get
+            {
+                return _age;
+            }
+            set {
+                _age = value;
+            } 
+        }
 
         public Person(int age, string name)
         {
-            Name = name;
             _name = name;
             _age = age;
-            Age = age;
         }
 
        public void DisplayInfo()
         {
-
             Console.WriteLine($"{Name} is {Age} jaar oud");
-
         }
-
     }
 }

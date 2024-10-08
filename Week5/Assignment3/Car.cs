@@ -8,19 +8,14 @@ namespace Assignment3
 {
     public class Car
     {
-
         string _make, _model;
         int _year;
-     
 
         public Car(string make, string model, int year)
         {
-
             _make = make;
             _model = model;
             _year = year;
-            
-
         }
 
         public string Make
@@ -61,13 +56,10 @@ namespace Assignment3
 
         public void DisplayCarInfo()
         {
-
             Console.WriteLine("Car Details");
-            Console.WriteLine($"Make: {Make}");
-            Console.WriteLine($"Model: {Model}");
-            Console.WriteLine($"Year: {Year}");
-
+            Console.WriteLine($"Make: {_make}");
+            Console.WriteLine($"Model: {_model}");
+            Console.WriteLine($"Year: {_year}");
         }
-
     }
 }

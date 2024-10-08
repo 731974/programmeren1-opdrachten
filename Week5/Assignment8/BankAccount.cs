@@ -8,40 +8,8 @@ namespace Assignment8
 {
     public class BankAccount
     {
-
         double _initialBalance;
         string _accountNumber;
-
-
-
-        public BankAccount(string accountNumber, double initialBalance)
-        {
-            _accountNumber = accountNumber;
-            _initialBalance = initialBalance;
-        }
-
-        public void Withdraw(double amount)
-        {
-
-            if(amount < 0 )
-            {
-                return;
-            }
-
-            this.Balance -= amount;
-
-        }
-
-      public void Deposit(double amount)
-        {
-            if (amount < 0)
-            {
-                return;
-            }
-
-            this.Balance += amount;
-
-        }
 
         public double Balance
         {
@@ -52,9 +20,7 @@ namespace Assignment8
             set
             {
                 if (value < 0)
-                {
                     return;
-                }
 
                 _initialBalance = value;
             }
@@ -69,13 +35,42 @@ namespace Assignment8
             private set { }
         }
 
+        public BankAccount(string accountNumber, double initialBalance)
+        {
+            _accountNumber = accountNumber;
+            _initialBalance = initialBalance;
+        }
+
+        public void Withdraw(double amount)
+        {
+            if (amount < 0 )
+                return;
+
+            this.Balance -= amount;
+        }
+
+        public void Deposit(double amount)
+        {
+            if (amount < 0)
+                return;
+
+            this.Balance += amount;
+        }
+
         public void DisplayInfo()
         {
-
             Console.WriteLine("Account Details:");
             Console.WriteLine($"Account Number: {_accountNumber}");
             Console.WriteLine($"Balance: {_initialBalance:F2}");
+        }
 
+        public void Transfer(BankAccount receivingAccount, double amount)
+        {
+            if (amount > this.Balance)
+                return;
+
+            this.Withdraw(amount);
+            receivingAccount.Deposit(amount);
         }
     }
 }

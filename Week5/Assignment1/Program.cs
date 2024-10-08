@@ -10,17 +10,13 @@
 
         void Start()
         {
-
             Console.Write("Enter name: ");
             string name = Console.ReadLine();
-
             Console.Write("Enter age: ");
             int age = int.Parse(Console.ReadLine());
 
             Person person = new(age, name);
-
             person.DisplayInfo();
-
         }
     }
 }

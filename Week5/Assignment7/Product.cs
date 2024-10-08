@@ -8,16 +8,13 @@ namespace Assignment7
 {
     public class Product
     {
-
-       string _name;
-       double _price;
+        string _name;
+        double _price;
 
         public Product(double price, string name)
         {
-
             _name = name;
             _price = price;
-
         }
 
         public string Name
@@ -26,8 +23,8 @@ namespace Assignment7
             {
                 return _name;
             }
-            set {
-            
+            set 
+            {
                 _name = value;
             }
         }
@@ -38,25 +35,19 @@ namespace Assignment7
             {
                 return _price;
             }
-            private set
+            set
             {
                 if (value < 0)
-                {
                     return;
-                }
-
                 _price = value;
             }
         }
 
         public void DisplayProductInfo()
         {
-
             Console.WriteLine("Product Details:");
             Console.WriteLine($"Name: {_name}");
             Console.WriteLine($"Price: {_price}");
-
         }
-
     }
 }
