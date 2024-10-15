@@ -4,15 +4,12 @@
     {
         static void Main(string[] args)
         {
-
             Program program = new Program();
             program.Start();
-
         }
 
         void Start()
         {
-
             int[] numbers = new int[20];
 
             FillNumbers(numbers);
@@ -23,9 +20,8 @@
         void DisplayNumbers(int[] numbers, int average)
         {
             Console.WriteLine($"Calculated average number: {average}");
-
+            
             for (int i = 0; i < numbers.Length; i++) {
-
                 if (numbers[i] == average)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -34,40 +30,31 @@
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                 }
-                else if (numbers[i] < average) 
+                else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                 }
-
                 Console.Write($"{numbers[i]} ");
-
             }
-
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
-
         }
 
         void FillNumbers(int[] numbers)
         {
-
+            Random rnd = new Random();
             for (int i = 0; i < numbers.Length; i++)
             {
-
-                Random rnd = new Random();
-
-                numbers[i] = rnd.Next(0, 100);
-
+                numbers[i] = rnd.Next(1, 100);
             }
         }
-
+        
         int GetAverage(int[] numbers)
         {
             int sum = 0;
             for (int i = 0; i < numbers.Length; i++) { 
                 sum += numbers[i];
             }
-
             return sum / numbers.Length;
         }
     }

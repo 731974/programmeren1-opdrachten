@@ -10,7 +10,7 @@ namespace Opgave5
     {
 
         private string _name;
-        public string Name { get { return _name; } private set { _name = value; } }
+        public string Name { get; }
         private int _numberOfWorkingHours;
         public int NumberOfWorkingHours
         {
@@ -20,7 +20,6 @@ namespace Opgave5
             }
             set
             {
-
                 if (value < 0)
                     return;
 
@@ -30,36 +29,25 @@ namespace Opgave5
 
         public Machine(string name, int numberOfWorkingHours)
         {
-
             Name = name;
             NumberOfWorkingHours = numberOfWorkingHours;
-
         }
 
-        bool NeedsMaintenance
+        public bool NeedsMaintenance
         {
             get
             {
-                if(NumberOfWorkingHours >= 10000)
+                if (NumberOfWorkingHours >= 10000)
                 {
                     return true;
                 }
-
                 return false;
             }
         }
 
        public void DisplayInfo()
         {
-            string needsMaintenanceText;
-            if (NeedsMaintenance)
-            {
-                needsMaintenanceText = "yes";
-            }
-            else
-            {
-                needsMaintenanceText = "no";
-            }
+            string needsMaintenanceText = NeedsMaintenance ? "yes" : "no";
 
             Console.WriteLine($"Machine name: {Name}");
             Console.WriteLine($"Number of working hours: {NumberOfWorkingHours}");

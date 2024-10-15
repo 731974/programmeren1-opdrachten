@@ -6,12 +6,10 @@
         {
             Program program = new Program();
             program.Start();
-
         }
 
         void Start()
         {
-
             bool isNegativeNumberOrZero = false;
 
             while (!isNegativeNumberOrZero)
@@ -27,33 +25,24 @@
 
                 int countPrimeFactors = CountPrimeFactors(number);
 
-                if(countPrimeFactors == 1)
+                if (countPrimeFactors == 1)
                 {
                     Console.WriteLine($"The number {number} is a prime number!");
                 } else
                 {
                     Console.WriteLine($"The number {number} has {countPrimeFactors} prime factors.");
                 }
-
-                Console.WriteLine();
-                 
             }
-
             Console.WriteLine("end of program");
-
-
-
         }
 
         int CountPrimeFactors(int number)
         {
-
             int diversor = 2;
             int count = 0;
 
             while (number > 1)
             {
-
                 if (number % diversor == 0)
                 {
                     number /= diversor;
@@ -63,9 +52,7 @@
                 {
                     diversor++;
                 }
-
             }
-
             return count;
         }
     }
