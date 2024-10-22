@@ -19,23 +19,33 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment8", "Assignment8\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment4", "Assignment4\Assignment4.csproj", "{717305FD-93E1-4223-A5E3-D77EAA4789A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment1unittests", "Tests\assignment1unittests\assignment1unittests.csproj", "{05A5096D-4B9D-4E15-B4C9-90088C255924}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment1unittests", "Tests\assignment1unittests\assignment1unittests.csproj", "{05A5096D-4B9D-4E15-B4C9-90088C255924}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8615646D-BD54-469B-A68A-6FD3472E82B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment2unittests", "Tests\assignment2unittests\assignment2unittests.csproj", "{63F7EB49-29FE-409F-A23A-0B86642E5029}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment2unittests", "Tests\assignment2unittests\assignment2unittests.csproj", "{63F7EB49-29FE-409F-A23A-0B86642E5029}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment3unittests", "Tests\assignment3unittests\assignment3unittests.csproj", "{07F05D95-0128-484F-AA61-617A1947C4DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment3unittests", "Tests\assignment3unittests\assignment3unittests.csproj", "{07F05D95-0128-484F-AA61-617A1947C4DE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment4unittests", "Tests\assignment4unittests\assignment4unittests.csproj", "{D81D0223-AC1A-4FE0-9B7C-3042DD78510F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment5unittests", "Tests\assignment5unittests\assignment5unittests.csproj", "{46918B66-4929-4B64-847C-C74FB85FC596}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment6unittests", "Tests\assignment6unittests\assignment6unittests.csproj", "{AB8AC8AD-71EB-4055-B6C0-3DA98BDC6107}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment6unittests", "Tests\assignment6unittests\assignment6unittests.csproj", "{AB8AC8AD-71EB-4055-B6C0-3DA98BDC6107}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment7unittests", "Tests\assignment7unittests\assignment7unittests.csproj", "{C8F0342F-1737-4042-B11F-49199E5DE422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment7unittests", "Tests\assignment7unittests\assignment7unittests.csproj", "{C8F0342F-1737-4042-B11F-49199E5DE422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment8unittests", "Tests\assignment8unittests\assignment8unittests.csproj", "{550EE193-3287-4F62-A502-E7B030D72B9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assignment8unittests", "Tests\assignment8unittests\assignment8unittests.csproj", "{550EE193-3287-4F62-A502-E7B030D72B9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge1", "Challenge1\Challenge1.csproj", "{9BB3D59D-E387-4C57-92C8-A619F2031B76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge2", "Challenge2\Challenge2.csproj", "{3FED7036-1167-4093-9DDD-5EB4618032F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge3", "Challenge3\Challenge3.csproj", "{8AB0A360-41E9-4216-B38D-6F73FCC1481E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge4", "Challenge4\Challenge4.csproj", "{C271730C-C48C-4F2E-9C8C-35634A738544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge5", "Challenge5\Challenge5.csproj", "{67809E29-C940-41A6-B57A-EFE4C21AE39B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +117,26 @@ Global
 		{550EE193-3287-4F62-A502-E7B030D72B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{550EE193-3287-4F62-A502-E7B030D72B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{550EE193-3287-4F62-A502-E7B030D72B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BB3D59D-E387-4C57-92C8-A619F2031B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB3D59D-E387-4C57-92C8-A619F2031B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB3D59D-E387-4C57-92C8-A619F2031B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB3D59D-E387-4C57-92C8-A619F2031B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FED7036-1167-4093-9DDD-5EB4618032F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FED7036-1167-4093-9DDD-5EB4618032F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FED7036-1167-4093-9DDD-5EB4618032F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FED7036-1167-4093-9DDD-5EB4618032F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB0A360-41E9-4216-B38D-6F73FCC1481E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB0A360-41E9-4216-B38D-6F73FCC1481E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB0A360-41E9-4216-B38D-6F73FCC1481E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB0A360-41E9-4216-B38D-6F73FCC1481E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C271730C-C48C-4F2E-9C8C-35634A738544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C271730C-C48C-4F2E-9C8C-35634A738544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C271730C-C48C-4F2E-9C8C-35634A738544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C271730C-C48C-4F2E-9C8C-35634A738544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67809E29-C940-41A6-B57A-EFE4C21AE39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67809E29-C940-41A6-B57A-EFE4C21AE39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67809E29-C940-41A6-B57A-EFE4C21AE39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67809E29-C940-41A6-B57A-EFE4C21AE39B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

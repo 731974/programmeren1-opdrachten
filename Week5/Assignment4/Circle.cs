@@ -37,8 +37,8 @@ namespace Assignment4
 
         public void DisplayCircleInfo()
         {
-            Console.WriteLine($"Radius: {_radius}");
-            Console.WriteLine($"Area: {_area}");
+            Console.WriteLine($"Radius: {Radius}");
+            Console.WriteLine($"Area: {Area}");
         }
     }
 }
