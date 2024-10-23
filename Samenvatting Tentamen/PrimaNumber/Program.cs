@@ -21,19 +21,14 @@ class Program
 
     bool IsPrime(int number)
     {
-
-        for (int i = 2; i < number; i++)
-        {
-
-            if (number % i == 0)
-            {
+        int i = 2;
+        while (i < number) {
+            if (number % i == 0) {
                 return false;
-            }
-            else
+            } else {
                 i++;
+            }
         }
-
-
         return true;
     }
 }
